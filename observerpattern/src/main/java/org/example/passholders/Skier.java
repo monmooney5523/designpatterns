@@ -1,9 +1,8 @@
 package org.example.passholders;
 
-public class Skier implements Passholder {
+public class Skier extends AbstractPassholder {
 
-    @Override
-    public void update() {
-
+    public Skier(String name) {
+        this.name = name;
     }
 }

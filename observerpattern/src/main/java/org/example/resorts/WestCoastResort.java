@@ -1,5 +1,10 @@
 package org.example.resorts;
 
+import org.example.passholders.Passholder;
+import org.example.passholders.Snowboarder;
+
+import java.util.Objects;
+
 public class WestCoastResort extends AbstractSkiResort {
 
 
@@ -8,7 +13,12 @@ public class WestCoastResort extends AbstractSkiResort {
     }
 
     @Override
-    public void shareLiftStatus() {
-        System.out.printf("West Coast resort %s has %s inches of snow%n", name, snowTotal);
+    public void addSubscriber(Passholder passholder) {
+        if(passholder instanceof Snowboarder && Objects.equals(name, "Alta")){
+            System.out.println("Snowboarders cannot subscribe to Alta");
+        }else {
+            passholders.add(passholder);
+            System.out.printf("Successfully added subscriber %s to %s%n", passholder.getName(), name);
+        }
     }
 }

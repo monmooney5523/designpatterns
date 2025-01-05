@@ -2,5 +2,6 @@ package org.example.passholders;
 
 public interface Passholder {
 
-    void update();
+    String getName();
+    void update(String updateType, String... args);
 }

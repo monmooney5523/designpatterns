@@ -9,4 +9,6 @@ public interface SkiResort {
     void removeSubscriber(Passholder passholder);
 
     void shareLiftStatus();
+
+    void shareSnowTotals();
 }
