@@ -4,7 +4,7 @@ import org.example.passholders.Passholder;
 
 import java.util.ArrayList;
 
-public class AbstractSkiResort implements SkiResort {
+public abstract class AbstractSkiResort implements SkiResort {
 
     String name;
     String location;

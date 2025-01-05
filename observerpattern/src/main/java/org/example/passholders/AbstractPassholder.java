@@ -1,8 +1,11 @@
 package org.example.passholders;
 
-public class AbstractPassholder implements Passholder{
+public abstract class AbstractPassholder implements Passholder {
+    private String name;
 
-    String name;
+    public AbstractPassholder(String name) {
+        this.name = name;
+    }
 
     @Override
     public String getName() {
@@ -11,7 +14,8 @@ public class AbstractPassholder implements Passholder{
 
     @Override
     public void update(String updateType, String... args) {
-        switch(updateType){
+        // Default implementation for update method
+        switch (updateType) {
             case "snowTotals":
                 System.out.printf("UPDATE for %s: Currently the base at %s is %s%n", name, args[0], args[1]);
                 break;
@@ -28,3 +32,4 @@ public class AbstractPassholder implements Passholder{
         }
     }
 }
+
